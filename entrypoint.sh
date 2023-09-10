@@ -20,7 +20,7 @@ function show_help {
 
 OPTIND=1 # Reset in case getopts has been used previously in the shell.
 
-vehicle=plane
+vehicle=plane_lidar
 world=empty
 
 while getopts "h?v:w:" opt; do
