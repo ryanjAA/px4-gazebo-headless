@@ -45,8 +45,8 @@ RUN pip3 install --upgrade pip && \
                  toml \
                  pyyaml
 
-RUN git clone https://github.com/ryanjAA/PX4-Autopilot.git ${FIRMWARE_DIR}
-RUN git -C ${FIRMWARE_DIR} checkout 1.14e
+RUN git clone https://github.com/ryanjAA/PX4-1.14c.git ${FIRMWARE_DIR}
+RUN git -C ${FIRMWARE_DIR} checkout v1.14.0-1.00.4
 RUN git -C ${FIRMWARE_DIR} submodule update --init --recursive
 
 COPY edit_rcS.bash ${WORKSPACE_DIR}
