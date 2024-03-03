@@ -35,8 +35,10 @@ RUN apt-get update && \
     apt-get clean autoclean && \
     rm -rf /var/lib/apt/lists/{apt,dpkg,cache,log} /tmp/* /var/tmp/*
 
+# Upgrade pip and adjust Python packages installation
 RUN pip3 install --upgrade pip && \
-    pip3 install empy \
+    pip3 uninstall -y em && \
+    pip3 install empy==3.3.4 \
                  future \
                  jinja2 \
                  kconfiglib \
